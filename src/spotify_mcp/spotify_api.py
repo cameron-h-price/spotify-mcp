@@ -211,6 +211,8 @@ class Client:
             return True
         return False
 
+
+    @utils.ensure_username
     def get_current_user_playlists(self, limit=50) -> List[Dict]:
         playlists = []
         results = self.sp.current_user_playlists(limit=50)
